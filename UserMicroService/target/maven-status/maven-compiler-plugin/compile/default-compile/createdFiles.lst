@@ -1,0 +1,16 @@
+com\simplon\controller\UserController.class
+com\simplon\exception\CustomErrorResponse.class
+com\simplon\model\enums\Role.class
+com\simplon\service\UserService.class
+com\simplon\mapper\UserMapper.class
+com\simplon\mapper\UserMapperImpl.class
+com\simplon\exception\CustomExceptionHandler.class
+com\simplon\model\dto\UserDto$UserDtoBuilder.class
+com\simplon\model\entity\UserEntity.class
+com\simplon\model\dto\UserDto.class
+com\simplon\repository\UserRepository.class
+com\simplon\UserApplication.class
+com\simplon\model\entity\UserEntity$UserEntityBuilder.class
+com\simplon\service\impl\UserServiceImpl.class
+com\simplon\model\enums\Gender.class
+com\simplon\exception\CustomNotFoundException.class

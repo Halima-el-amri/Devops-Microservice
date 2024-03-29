@@ -1,0 +1,239 @@
+version: '3.1'
+
+services:
+  friendship-db:
+    container_name: friendship-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: friendship_microservice
+      POSTGRES_PASSWORD: friendship_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - friendship-db:/data/postgres
+    ports:
+      - "5228:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  notification-db:
+    container_name: notification-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: notification_microservice
+      POSTGRES_PASSWORD: notification_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - notification-db:/data/postgres
+    ports:
+      - "5227:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  group-db:
+    container_name: group-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: group_microservice
+      POSTGRES_PASSWORD: group_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - group-db:/data/postgres
+    ports:
+      - "5225:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  media-db:
+    container_name: media-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: media_microservice
+      POSTGRES_PASSWORD: media_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - media-db:/data/postgres
+    ports:
+      - "5224:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  reaction-db:
+    container_name: reaction-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: reaction_microservice
+      POSTGRES_PASSWORD: reaction_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - reaction-db:/data/postgres
+    ports:
+      - "5226:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  publication-db:
+    container_name: publication-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: publication_microservice
+      POSTGRES_PASSWORD: publication_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - publication-db:/data/postgres
+    ports:
+      - "5223:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+=======
+      - db
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    restart: unless-stopped
+
+  user-db:
+    container_name: user-microservice-db
+    image: postgres:16
+    environment:
+      POSTGRES_USER: user_microservice
+      POSTGRES_PASSWORD: user_microservice
+      PGDATA: /data/postgres
+    volumes:
+      - user-db:/data/postgres
+    ports:
+      - "5222:5432"
+    networks:
+<<<<<<< HEAD
+      - connexia
+    restart: unless-stopped
+
+  user-microservice:
+    build:
+      context: ./UserMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9092:9092'
+    depends_on:
+      - user-db
+    networks:
+      - connexia
+
+  publication-microservice:
+    build:
+      context: ./PublicationMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9093:9093'
+    depends_on:
+      - publication-db
+    networks:
+      - connexia
+
+  reaction-microservice:
+    build:
+      context: ./ReactionMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9094:9094'
+    depends_on:
+      - reaction-db
+    networks:
+      - connexia
+
+  media-microservice:
+    build:
+      context: ./MediaMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9095:9095'
+    depends_on:
+      - media-db
+    networks:
+      - connexia
+
+  group-microservice:
+    build:
+      context: ./GroupMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9096:9096'
+    depends_on:
+      - group-db
+    networks:
+      - connexia
+
+  notification-microservice:
+    build:
+      context: ./NotificationMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9097:9097'
+    depends_on:
+      - notification-db
+    networks:
+      - connexia
+
+  friendship-microservice:
+    build:
+      context: ./FriendMicroService
+      dockerfile: Dockerfile
+    ports:
+      - '9098:9098'
+    depends_on:
+      - friendship-db
+    networks:
+      - connexia
+
+networks:
+  connexia:
+=======
+      - db
+    restart: unless-stopped
+
+  zipkin:
+    container_name: zipkin2
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
+    networks:
+      - zipkin
+
+networks:
+  db:
+    driver: bridge
+  zipkin:
+>>>>>>> f2c1b9f05e0129b09dca24b8ae9d646b1e2af924
+    driver: bridge
+
+volumes:
+  notification-db:
+  group-db:
+  media-db:
+  reaction-db:
+  publication-db:
+  user-db:
+  friendship-db:

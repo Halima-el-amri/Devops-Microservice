@@ -1,0 +1,14 @@
+com\simplon\servicemedia\MyFileNotFoundException.class
+com\simplon\servicemedia\kafkaConsumerConfig.class
+com\simplon\servicemedia\MapperConfig.class
+com\simplon\servicemedia\KafkaListeners.class
+com\simplon\servicemedia\MediaDTO.class
+com\simplon\servicemedia\MediaRepository.class
+com\simplon\servicemedia\MediaController.class
+com\simplon\servicemedia\TypeFile.class
+com\simplon\servicemedia\FileStorageException.class
+com\simplon\servicemedia\IMedia.class
+com\simplon\servicemedia\FileStorageProperties.class
+com\simplon\servicemedia\MediaService.class
+com\simplon\Media.class
+com\simplon\servicemedia\Media.class

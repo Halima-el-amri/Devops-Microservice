@@ -1,0 +1,10 @@
+com\simplon\servicepost\kafkaProducerConfig.class
+com\simplon\servicepost\Ipost.class
+com\simplon\servicepost\PostService.class
+com\simplon\servicepost\PostDTO.class
+com\simplon\servicepost\Post.class
+com\simplon\servicepost\PostRepository.class
+com\simplon\servicepost\kafkaTopicConfig.class
+com\simplon\servicepost\PostController.class
+com\simplon\Publication.class
+com\simplon\servicepost\MapperConfig.class

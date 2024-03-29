@@ -1,0 +1,12 @@
+com\simplon\ReactionService\ReactionServiceImpl.class
+com\simplon\ReactionService\ReactionMapper.class
+com\simplon\ReactionService\ReactionMapperImpl.class
+com\simplon\ReactionService\Reaction.class
+com\simplon\ReactionService\TypeReaction.class
+com\simplon\ReactionService\ReactionService.class
+com\simplon\ReactionService\ReactionController.class
+com\simplon\ReactionService\ReactionDTO$ReactionDTOBuilder.class
+com\simplon\ReactionService\ReactionRepository.class
+com\simplon\Reaction.class
+com\simplon\ReactionService\Reaction$ReactionBuilder.class
+com\simplon\ReactionService\ReactionDTO.class

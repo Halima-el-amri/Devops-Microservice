@@ -1,0 +1,3 @@
+com\simplon\ApiGatewayApplication.class
+com\simplon\config\KeycloakRoleConverter.class
+com\simplon\config\SecurityConfig.class
